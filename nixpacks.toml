@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["python310", "pip"]
+
+[phases.build]
+cmds = [
+  "pip install mkdocs",
+  "mkdocs build"
+]
+
+[start]
+cmd = "mkdocs serve -a 0.0.0.0:8000"
